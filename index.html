@@ -15,10 +15,9 @@
             font-family: 'Arial', sans-serif;
             position: relative;
             overflow: hidden;
-            color: #fff; /* Color de texto blanco */
+            color: #fff; 
         }
 
-        /* Fondo de fuego animado */
         body::before {
             content: '';
             position: absolute;
@@ -26,16 +25,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('fuego1.gif'); /* Dos gifs de fuego */
+            background-image: url('fuego1.gif'); 
             background-size: cover;
             background-position: center;
             background-blend-mode: screen;
-            z-index: -1; /* Para que el fondo quede atrás del contenido */
-            opacity: 0.7; /* Transparencia para no opacar el contenido */
-            animation: moveBackground 10s linear infinite; /* Animación de movimiento */
+            z-index: -1; 
+            opacity: 0.7;
+            animation: moveBackground 10s linear infinite; 
         }
 
-        /* Animación del fondo de fuego */
         @keyframes moveBackground {
             0% { background-position: 0 0, 100% 100%; }
             100% { background-position: 100% 100%, 0 0; }
@@ -45,7 +43,7 @@
             font-size: 20px;
             cursor: pointer;
             position: relative;
-            z-index: 1; /* Para que el botón esté por encima de la imagen */
+            z-index: 1; 
             transition: background-color 0.3s;
         }
 
@@ -55,7 +53,7 @@
             opacity: 0;
             transition: opacity 1s ease;
             position: relative;
-            z-index: 2; /* Para que el texto esté por encima de la imagen */
+            z-index: 2;
         }
 
         #image {
@@ -64,127 +62,127 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Para que la imagen cubra toda la pantalla */
-            z-index: 0; /* Para que la imagen esté detrás del texto */
-            filter: brightness(0.7); /* Oscurece la imagen */
+            object-fit: cover;
+            z-index: 0;
+            filter: brightness(0.7);
         }
 
         h1, p {
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Resplandor rojo */
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
         }
 
-.golden-button {
+        .golden-button {
 
     
-    font-family: 'Special Elite', monospace;
-    touch-action: manipulation;
-    display: inline-block;
-    outline: none;
-    font-size: 1em;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 0.3em;
-    height: 2.75em;
-    line-height: 2.5em;
-    text-transform: uppercase;
-    padding: 0 1em;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
-      inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
-      inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
-    background-image: linear-gradient(
-      160deg,
-      #a54e07,
-      #b47e11,
-      #fef1a2,
-      #bc881b,
-      #a54e07
-    );
-    border: 1px solid #a55d07;
-    color: rgb(120, 50, 5);
-    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    background-size: 100% 100%;
-    background-position: center;
-  }
-  
-  .golden-button:focus,
-  .golden-button:hover {
-    background-size: 150% 150%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
-      inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
-    border: 1px solid rgba(165, 93, 7, 0.6);
-    color: rgba(120, 50, 5, 0.8);
-  }
-  
-  .golden-button:active {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
-      inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
-  }
-  
-  @keyframes burn {
-    0% {
-      text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px yellow, 0 0 40px yellow;
-      color: crimson;
-    }
-    50% {
-      text-shadow: 0 0 15px red, 0 0 25px orange, 0 0 35px yellow, 0 0 50px orange;
-      color: darkred;
-    }
-    100% {
-      text-shadow: 0 0 20px red, 0 0 30px orange, 0 0 40px yellow, 0 0 60px yellow;
-      color: firebrick;
-    }
-  }
-  
-  @keyframes drip {
-    0% {
-      transform: translateY(0);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0px);
-      opacity: 0;
-    }
-  }
-  
-  .bloody-burning-text {
-    font-family: 'Special Elite', monospace;
-    letter-spacing: 0.05em;
-    
-    font-size: 50px;
-    color: crimson;
-    position: relative;
-    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px yellow, 0 0 40px yellow;
-    animation: burn 3s infinite alternate;
-  }
-  
-  .bloody-burning-text::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 5px;
-    height: 50px;
-    background: red;
-    transform: translateX(-50%);
-    opacity: 0.8;
-    animation: drip 2s infinite;
-  }
-  
-  .bloody-burning-text::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 60%;
-    width: 3px;
-    height: 30px;
-    background: darkred;
-    transform: translateX(-50%);
-    opacity: 0.6;
-    animation: drip 2.5s infinite;
-  }
-  
+            font-family: 'Special Elite', monospace;
+            touch-action: manipulation;
+            display: inline-block;
+            outline: none;
+            font-size: 1em;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 0.3em;
+            height: 2.75em;
+            line-height: 2.5em;
+            text-transform: uppercase;
+            padding: 0 1em;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+            inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+            inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+            background-image: linear-gradient(
+              160deg,
+              #a54e07,
+              #b47e11,
+              #fef1a2,
+              #bc881b,
+              #a54e07
+            );
+            border: 1px solid #a55d07;
+            color: rgb(120, 50, 5);
+            text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            background-size: 100% 100%;
+            background-position: center;
+          }
+          
+          .golden-button:focus,
+          .golden-button:hover {
+            background-size: 150% 150%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+              inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+            border: 1px solid rgba(165, 93, 7, 0.6);
+            color: rgba(120, 50, 5, 0.8);
+          }
+          
+          .golden-button:active {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+              inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+          }
+          
+          @keyframes burn {
+            0% {
+              text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px yellow, 0 0 40px yellow;
+              color: crimson;
+            }
+            50% {
+              text-shadow: 0 0 15px red, 0 0 25px orange, 0 0 35px yellow, 0 0 50px orange;
+              color: darkred;
+            }
+            100% {
+              text-shadow: 0 0 20px red, 0 0 30px orange, 0 0 40px yellow, 0 0 60px yellow;
+              color: firebrick;
+            }
+          }
+          
+          @keyframes drip {
+            0% {
+              transform: translateY(0);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0px);
+              opacity: 0;
+            }
+          }
+          
+          .bloody-burning-text {
+            font-family: 'Special Elite', monospace;
+            letter-spacing: 0.05em;
+            
+            font-size: 50px;
+            color: crimson;
+            position: relative;
+            text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px yellow, 0 0 40px yellow;
+            animation: burn 3s infinite alternate;
+          }
+          
+          .bloody-burning-text::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 5px;
+            height: 50px;
+            background: red;
+            transform: translateX(-50%);
+            opacity: 0.8;
+            animation: drip 2s infinite;
+          }
+      
+          .bloody-burning-text::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 60%;
+            width: 3px;
+            height: 30px;
+            background: darkred;
+            transform: translateX(-50%);
+            opacity: 0.6;
+            animation: drip 2.5s infinite;
+          }
+          
 
     </style>
 </head>
@@ -253,7 +251,7 @@
             timeText.textContent = `${nowFormatted}`;
             dayText.textContent = `${currentDay.charAt(0).toUpperCase() + currentDay.slice(1)}`;
 
-            button.style.display = 'none'; // Hacer desaparecer el botón
+            button.style.display = 'none'; 
             result.style.display = 'block';
             setTimeout(() => {
                 result.style.opacity = 1;
